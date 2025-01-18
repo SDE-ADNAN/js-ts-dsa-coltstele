@@ -13,12 +13,12 @@
  * validAnagram('texttwisttime', 'timetwisttext') // true
  */
 
-function validAnagram(str1, str2) {
+function validAnagram(str1: string, str2: string): boolean {
   if (str1.length !== str2.length) {
     return false;
   }
 
-  const lookup = {};
+  const lookup: { [key: string]: number } = {};
 
   for (let i = 0; i < str1.length; i++) {
     let letter = str1[i];
